@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "raleway";
+    src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+
+.filtro {
+    display:none;
+}
+
+body {
+    text-align: center;
+    max-width: 100%;
+    background: linear-gradient(70deg, blue, rgb(196, 47, 72));
+    font-family: 'raleway'  !important;
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    background-image: url('../assets/9aa1414ae10ccf236cca0b7174ec4d8d.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  }
+   
+
+
+#btnE {
+    background-color: green;
+}
+#btnE:hover {
+    background-color: rgb(1, 83, 1)
+}
+
+.table {
+    max-width: 100%;
+margin:0 auto;
+-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+box-shadow: 5px 5px 15px 5px #000000;
+
+}
+/*pseudoclase que hace que los inpùts con el atributo de requerido tengan ese estilo */
+input:required {
+    border: 1px dashed red;
+  }
+
+#btnA {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    padding: 15px;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    background-color: purple;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#3dffc9, #f7c723, #eb0ea5, #3dffc9);
+    box-shadow:  0px 0px 150px -75px black;
+    border: 2px solid white;
+}
+
+#buscador {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 1%;
+
+}
+#tabla {
+    list-style:  none;
+    padding: 0;
+}
+/* Keyframe para la animación de aparecer en las celdas */
+@keyframes aparecer {
+ 0% {
+    opacity: 0;
+    transform: translateY(-20);
+ }
+ 100% {
+    opacity: 1;
+    transform: translateY(0);
+ }
+ 
+}
+#tabla td {
+    animation: aparecer 2s ease-in-out;
+}
+
+@keyframes deasaparecer {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+     }
+     100% {
+        opacity: 0;
+        transform: translateY(-20);
+     }
+}
+#table li.eliminada {
+    animation: desaparecer 2s ease-in;
+}
+/*Pseudoelemento */
+.spinner::before {
+  content: "Añadir Producto ";
+  background-color: white;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 0px 110px -70px black;
+  border: 2px solid white;
+}
+
+
+/*Animación para la rotación*/
+.rotate {
+
+     animation:spin 1.5s ease-in-out;
+ }
+
+ @keyframes spin { 
+     100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+ }
